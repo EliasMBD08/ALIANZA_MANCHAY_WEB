@@ -10,7 +10,6 @@ import { useHeaderTitle } from "../context/HeaderTitleContext.jsx";
 export const Principal = () => {
   const { tituloHeader } = useHeaderTitle();
   const location = useLocation();
-
   return (
     <div className="container-fluid p-0">
       <NavBar />

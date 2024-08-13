@@ -1,5 +1,8 @@
 import { Carousel } from "@material-tailwind/react";
- 
+import {
+  Typography,
+} from "@material-tailwind/react";
+
 export const Carrusel = () => {
   return (
     <Carousel
@@ -9,38 +12,68 @@ export const Carrusel = () => {
           {new Array(length).fill("").map((_, i) => (
             <span
               key={i}
-              className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
-                activeIndex === i ? "w-8 bg-white" : "w-4 bg-white/50"
-              }`}
+              className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${activeIndex === i ? "w-8 bg-white" : "w-4 bg-white/50"
+                }`}
               onClick={() => setActiveIndex(i)}
             />
           ))}
         </div>
       )}
-      autoplay={true}
+      // autoplay={true}
       loop={true}
-      transition={{type:"tween", duration: 1}}
+      transition={{ type: "tween", duration: 1 }}
     >
-      <div className="h-screen w-full">
+      <div className="relative h-screen w-full flex justify-center items-center">
         <img
-          src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
+          src="/images/carrusel/banner-1.webp"
           alt="image 1"
           className="h-full w-full object-cover"
         />
+        <div className="w-full h-full absolute z-2" style={{ backgroundColor: "rgb(0,0,0,0.3)" }}></div>
+        <div className="container absolute z-15 px-4 sm:px-8 md:px-16 lg:px-32 xl:px-56  text-center">
+          <Typography variant="h2" color="white" className="font-black">
+            Afirmaremos su crecimiento espiritual
+          </Typography>
+        </div>
       </div>
-      <div className="h-screen w-full">
+      <div className="relative h-screen w-full flex justify-center items-center">
         <img
-          src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+          src="/images/carrusel/banner-2.webp"
           alt="image 2"
           className="h-full w-full object-cover"
         />
+        <div className="w-full h-full absolute z-2" style={{ backgroundColor: "rgb(0,0,0,0.3)" }}></div>
+        <div className="container absolute z-15 px-4 sm:px-8 md:px-16 lg:px-32 xl:px-56  text-center">
+          <Typography variant="h2" color="white" className="font-black">
+            Ministraremos a todas las familias, restaurándolas para Cristo
+          </Typography>
+        </div>
       </div>
-      <div className="h-screen w-full">
+      <div className="relative h-screen w-full flex justify-center items-center">
         <img
-          src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
+          src="/images/carrusel/banner-3.webp"
           alt="image 3"
           className="h-full w-full object-cover"
         />
+        <div className="w-full h-full absolute z-2" style={{ backgroundColor: "rgb(0,0,0,0.3)" }}></div>
+        <div className="container absolute z-15 px-4 sm:px-8 md:px-16 lg:px-32 xl:px-56  text-center">
+          <Typography variant="h2" color="white" className="font-black">
+            Alcanzaremos el mundo predicando el evangelio a toda criatura
+          </Typography>
+        </div>
+      </div>
+      <div className="relative h-screen w-full flex justify-center items-center">
+        <img
+          src="/images/carrusel/banner-4.webp"
+          alt="image 4"
+          className="h-full w-full object-cover"
+        />
+        <div className="w-full h-full absolute z-2" style={{ backgroundColor: "rgb(0,0,0,0.3)" }}></div>
+        <div className="container absolute z-15 px-4 sm:px-8 md:px-16 lg:px-32 xl:px-56  text-center">
+          <Typography variant="h2" color="white" className="font-black">
+            Nutriremos a la gente con la palabra de Dios, la oración y un ministerio
+          </Typography>
+        </div>
       </div>
     </Carousel>
   );

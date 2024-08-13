@@ -1,5 +1,7 @@
-import React from "react";
 import { Link } from "react-router-dom";
+import {
+  Typography,
+} from "@material-tailwind/react";
 
 export function FooterPage() {
   return (
@@ -8,7 +10,7 @@ export function FooterPage() {
       style={{ backgroundColor: "#0378A6" }}
     >
       <div className="flex flex-col p-5">
-        <Link to="/" className="mr-4 cursor-pointer py-0 font-medium">
+        <Link to="/" className="mx-auto cursor-pointer py-0 font-medium">
           <img
             src="/images/logos/logo-alianza-negativo.webp"
             alt=""
@@ -57,7 +59,9 @@ export function FooterPage() {
       </div>
       {/* <hr /> */}
       <div className="text-center text-white p-5 bg-blue-gray-500">
-        Copyright 2024 | ACYM Manchay
+        <Typography>
+          Copyright 2024 | ACYM Manchay
+        </Typography>
       </div>
     </div>
   );
