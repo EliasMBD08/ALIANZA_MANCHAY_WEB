@@ -3,6 +3,8 @@ import {
   Typography,
 } from "@material-tailwind/react";
 
+import "../assets/scss/general.scss"
+
 export const Carrusel = () => {
   return (
     <Carousel
@@ -27,10 +29,10 @@ export const Carrusel = () => {
         <img
           src="/images/carrusel/banner-1.webp"
           alt="image 1"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover image-zoom"
         />
         <div className="w-full h-full absolute z-2" style={{ backgroundColor: "rgb(0,0,0,0.3)" }}></div>
-        <div className="container absolute z-15 px-4 sm:px-8 md:px-16 lg:px-32 xl:px-56  text-center">
+        <div className="container absolute z-15 px-4 sm:px-8 md:px-16 lg:px-32 xl:px-56  text-center text-slide-up">
           <Typography variant="h2" color="white" className="font-black">
             Afirmaremos su crecimiento espiritual
           </Typography>
@@ -40,10 +42,10 @@ export const Carrusel = () => {
         <img
           src="/images/carrusel/banner-2.webp"
           alt="image 2"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover image-zoom"
         />
         <div className="w-full h-full absolute z-2" style={{ backgroundColor: "rgb(0,0,0,0.3)" }}></div>
-        <div className="container absolute z-15 px-4 sm:px-8 md:px-16 lg:px-32 xl:px-56  text-center">
+        <div className="container absolute z-15 px-4 sm:px-8 md:px-16 lg:px-32 xl:px-56  text-center text-slide-up">
           <Typography variant="h2" color="white" className="font-black">
             Ministraremos a todas las familias, restaurándolas para Cristo
           </Typography>
@@ -53,10 +55,10 @@ export const Carrusel = () => {
         <img
           src="/images/carrusel/banner-3.webp"
           alt="image 3"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover image-zoom"
         />
         <div className="w-full h-full absolute z-2" style={{ backgroundColor: "rgb(0,0,0,0.3)" }}></div>
-        <div className="container absolute z-15 px-4 sm:px-8 md:px-16 lg:px-32 xl:px-56  text-center">
+        <div className="container absolute z-15 px-4 sm:px-8 md:px-16 lg:px-32 xl:px-56  text-center text-slide-up">
           <Typography variant="h2" color="white" className="font-black">
             Alcanzaremos el mundo predicando el evangelio a toda criatura
           </Typography>
@@ -66,10 +68,10 @@ export const Carrusel = () => {
         <img
           src="/images/carrusel/banner-4.webp"
           alt="image 4"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover image-zoom"
         />
         <div className="w-full h-full absolute z-2" style={{ backgroundColor: "rgb(0,0,0,0.3)" }}></div>
-        <div className="container absolute z-15 px-4 sm:px-8 md:px-16 lg:px-32 xl:px-56  text-center">
+        <div className="container absolute z-15 px-4 sm:px-8 md:px-16 lg:px-32 xl:px-56  text-center text-slide-up">
           <Typography variant="h2" color="white" className="font-black">
             Nutriremos a la gente con la palabra de Dios, la oración y un ministerio
           </Typography>

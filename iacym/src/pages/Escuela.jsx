@@ -42,6 +42,9 @@ export const Escuela = () => {
     obtenerDatos();
   }, []);
 
+  // Verificar si 'datos' no es null o undefined antes de mapear
+  const niveles = datos && typeof datos === 'object' ? Object.keys(datos) : [];
+
   return (
     <div className="container mx-auto">
       <div className="card py-12 md:py-24">
@@ -51,11 +54,11 @@ export const Escuela = () => {
           style={{ flexBasis: "50rem" }}
           orientation="vertical"
         >
-          {Object.keys(datos).map((nivel) => (
+          {niveles.map((nivel) => (
             <StepperPanel header={`Nivel ${nivel.split("_")[1]}`} key={nivel}>
               <div className="flex flex-column">
                 <div className="border-2 border-dashed border-surface-border rounded-lg bg-surface-ground p-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-5 gap-5 font-medium justify-items-center">
-                  {datos[nivel].length > 0 ? (
+                  {datos[nivel] && datos[nivel].length > 0 ? (
                     datos[nivel].map((curso) => (
                       <CardCurso key={curso.id} curso={curso} />
                     ))

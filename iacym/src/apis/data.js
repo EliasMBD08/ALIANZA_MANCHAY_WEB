@@ -1,9 +1,15 @@
-import { generalApi } from "./Index.js";
+import { getGeneralApi } from "./Index.js";
 
 // Función genérica para obtener datos de una API
 const obtenerDatosApi = async (endpoint) => {
+    if (!getGeneralApi) {
+        console.error("generalApi no está disponible.");
+        return;
+    }
+
     try {
-        const respuesta = await generalApi.get(endpoint);
+        const api = await getGeneralApi();
+        const respuesta = await api.get(endpoint);
         return respuesta.data;
     } catch (error) {
         console.error(`Error al obtener datos de ${endpoint}:`, error);

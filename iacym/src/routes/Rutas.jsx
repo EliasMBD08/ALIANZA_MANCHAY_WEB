@@ -8,6 +8,7 @@ import { Escuela } from "../pages/Escuela.jsx";
 import { Eventos } from "../pages/Eventos.jsx";
 import { Contacto } from "../pages/Contacto.jsx";
 import { Ofrendas } from "../pages/Ofrendas.jsx";
+import { Testing } from "../pages/Testing.jsx";
 
 import { NotificationProvider } from "../context/NotificationContext.jsx";
 import { ConfirmDialogProvider } from "../context/ConfirmDialogContext.jsx";
@@ -27,6 +28,7 @@ export function Rutas() {
                 <Route path="eventos" element={<Eventos />} />
                 <Route path="contacto" element={<Contacto />} />
                 <Route path="ofrendas" element={<Ofrendas />} />
+                <Route path="testing" element={<Testing />} />
               </Route>
             </Routes>
           </HeaderTitleProvider>

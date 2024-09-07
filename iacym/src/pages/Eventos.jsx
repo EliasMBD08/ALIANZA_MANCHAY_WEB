@@ -11,7 +11,7 @@ export const Eventos = () => {
 
   const data_header = {
     titulo: "EVENTOS",
-    url_img: "/images/header_redes.webp",
+    url_img: "/images/header_eventos.webp",
   };
 
   useEffect(() => {
@@ -67,8 +67,8 @@ export const Eventos = () => {
       {error && <div>{error}</div>}
       {datos ? (
         <>
-          {renderEventos("PRÓXIMOS EVENTOS", datos.false?.Retiro || [])}
-          {renderEventos("CAMPAMENTOS", datos.false?.Campamento || [], "#0378A6")}
+          {renderEventos("PRÓXIMOS EVENTOS", [...(datos.false?.Retiro || []), ...(datos.false?.Campamento || [])])}
+          {renderEventos("CAMPAMENTOS", datos.true?.Campamento || [], "#0378A6")}
           {renderEventos("RETIROS", datos.true?.Retiro || [])}
         </>
       ) : (

@@ -6,6 +6,7 @@ import {
   CardFooter,
   Typography,
 } from "@material-tailwind/react";
+import { ImageComponent } from "../components/Imagen.jsx";
 import { obtenerCuentasBancariasApi } from "../apis/data.js";
 import { useHeaderTitle } from "../context/HeaderTitleContext";
 
@@ -16,7 +17,7 @@ export const Ofrendas = () => {
 
   const data_header = {
     titulo: "OFRENDAS",
-    url_img: "/images/header_redes.webp",
+    url_img: "/images/header_ofrendas.webp",
   };
 
   useEffect(() => {
@@ -43,7 +44,7 @@ export const Ofrendas = () => {
     <div className="container mx-auto">
       <div className="flex justify-center my-12 md:my-24 ">
         <div className="max-w-100 grid grid-rows-2 gap-10 gap-y-16 justify-items-center">
-          {datos.map((cuenta, index) => (
+          {datos ? (datos.map((cuenta, index) => (
             <Card
               key={index}
               className="w-full mx-auto max-w-[58rem] flex-column md:flex-row p-5 md:p-0"
@@ -51,13 +52,9 @@ export const Ofrendas = () => {
               <CardHeader
                 shadow={false}
                 floated={false}
-                className="flex justify-center m-0 w-full shrink-0 md:w-1/3 md:rounded-r-none p-8 my-auto"
+                className="flex justify-center max-w-[15rem] p-4 shrink-0 md:w-1/3 my-auto"
               >
-                <img
-                  src={`/images/logos/${cuenta.banco}.svg`}
-                  alt={`logo ${cuenta.banco}`}
-                  className="w-full max-w-[12rem] object-cover "
-                />
+                <ImageComponent datos={cuenta.file} />
               </CardHeader>
               <CardBody className="w-full md:w-2/3 my-auto text-center">
                 <Typography
@@ -86,7 +83,7 @@ export const Ofrendas = () => {
                 </Typography>
               </CardBody>
             </Card>
-          ))}
+          ))):<div>Cargando...</div>}
         </div>
       </div>
     </div>

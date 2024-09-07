@@ -5,7 +5,7 @@ import "primereact/resources/themes/soho-light/theme.css"; //theme
 import "primereact/resources/primereact.min.css"; //core css
 import "primeicons/primeicons.css"; //icons
 // import "primeflex/primeflex.css"; // flex
-import "./App.css";
+import "./assets/scss/general.scss";
 
 import { Rutas } from "./routes/Rutas.jsx";
 

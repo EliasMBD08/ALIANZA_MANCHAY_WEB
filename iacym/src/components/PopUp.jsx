@@ -8,7 +8,6 @@ import {
 } from "@material-tailwind/react";
 
 export function PopUp({ data }) {
-  console.log(data);
   return (
     <Popover>
       <PopoverHandler>

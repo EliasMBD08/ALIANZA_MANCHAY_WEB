@@ -7,6 +7,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 
+import { ImageComponent } from "./Imagen.jsx";
 import { TooltipContainer } from "../components/Tooltip.jsx";
 
 
@@ -15,13 +16,12 @@ export function CardMinisterial({ info_ministerio }) {
   let url_img = `/images/ministerios/${info_ministerio.siglas}.webp`
 
   return (
-    <Card className="">
+    <Card>
       <CardHeader 
         color="blue-gray" 
-        className="relative inset-0 bg-no-repeat bg-center bg-cover h-56"
-        style={{ backgroundImage: `url(${url_img})` }}
+        className="flex justify-center items-center max-h-48"
       >
-        <span></span>
+        <ImageComponent datos={info_ministerio.file} />
       </CardHeader>
       <CardBody>
         <Typography variant="h5" color="blue-gray" className="mb-2 text-center">

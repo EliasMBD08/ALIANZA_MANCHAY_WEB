@@ -14,7 +14,7 @@ export const Contacto = () => {
 
   const data_header = {
     titulo: "CONTACTO",
-    url_img: "/images/header_redes.webp",
+    url_img: "/images/header_contacto.webp",
   };
 
   useEffect(() => {

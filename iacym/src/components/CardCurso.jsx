@@ -1,18 +1,19 @@
 import React from "react";
 import { ScrollPanel } from "primereact/scrollpanel";
 
+import { ImageComponent } from "./Imagen.jsx";
+
 import "../assets/scss/cardsCursos.scss";
 
 export const CardCurso = ({ curso }) => {
 
-  const url_image = `/images/cursos/${curso.nombre_archivo}.webp`;
-
   return (
     <div className="card-curso relative rounded-lg flex items-center justify-center transition-all overflow-hidden hover:shadow-lg">
       <div
-        style={{ backgroundImage: `url(${url_image})` }}
-        className="w-full h-full bg-no-repeat bg-center bg-cover"
-      ></div>
+        className="h-full bg-no-repeat bg-center bg-cover"
+      >
+        <ImageComponent datos={curso.file} />
+      </div>
       <div className="card-curso__content absolute top-1/2 left-1/2 -translate-x-2/4 -translate-y-2/4 w-full h-full p-5 box-border bg-white">
         <p className="m-0 font-bold text-2xl text-gray-700">{curso.nombre}</p>
         <ScrollPanel
@@ -25,4 +26,3 @@ export const CardCurso = ({ curso }) => {
     </div>
   );
 };
-

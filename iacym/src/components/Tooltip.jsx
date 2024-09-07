@@ -2,8 +2,6 @@ import "../assets/scss/tooltip.scss";
 import PropTypes from 'prop-types';
 
 export const TooltipContainer = ({ info_redes_sociales }) => {
-  console.log("info_redes_sociales");
-  console.log(info_redes_sociales);
   
 
   return (

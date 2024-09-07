@@ -6,7 +6,8 @@ import {
   Typography,
 } from "@material-tailwind/react";
 
-import { Carrusel } from "../components/Carrusel.jsx";
+import { Carousel } from "../components/Carousel.jsx";
+// import { Carrusel } from "../components/Carrusel.jsx";
 import { CardValor } from "../components/CardValor.jsx";
 import { CardServicio } from "../components/CardServicio.jsx";
 
@@ -14,6 +15,25 @@ import { useHeaderTitle } from "../context/HeaderTitleContext";
 
 export function Home() {
   const { setTituloHeader } = useHeaderTitle();
+
+  const slides = [
+    {
+      url: "/images/carrusel/banner-1.webp",
+      content: <h2 className="px-12 text-white text-2xl">Afirmaremos su crecimiento espiritual</h2>,
+    },
+    {
+      url: "/images/carrusel/banner-2.webp",
+      content: <h2 className="px-12 text-white text-2xl">Ministraremos a todas las familias, restaurándolas para Cristo</h2>,
+    },
+    {
+      url: "/images/carrusel/banner-3.webp",
+      content: <h2 className="px-12 text-white text-2xl">Alcanzaremos el mundo predicando el evangelio a toda criatura</h2>,
+    },
+    {
+      url: "/images/carrusel/banner-4.webp",
+      content: <h2 className="px-12 text-white text-2xl">Nutriremos a la gente con la palabra de Dios, la oración y un ministerio</h2>,
+    },
+  ];
 
   const valores = [
     {
@@ -40,8 +60,8 @@ export function Home() {
 
   const servicios = [
     {titulo: "Nuestras Redes", url_img: "/images/header_redes.webp", url_page: "/redes"},
-    {titulo: "Nuestras Escuelas", url_img: "/images/header_redes.webp", url_page: "/escuela"},
-    {titulo: "Eventos", url_img: "/images/header_redes.webp", url_page: "/eventos"}
+    {titulo: "Nuestras Escuelas", url_img: "/images/header_escuela.webp", url_page: "/escuela"},
+    {titulo: "Eventos", url_img: "/images/header_eventos.webp", url_page: "/eventos"}
   ]
 
   useEffect(() => {
@@ -51,7 +71,10 @@ export function Home() {
   }, [setTituloHeader]);
   return (
     <>
-      <Carrusel />
+      <div className="container-fluid mx-auto h-screen max-h-[700px] ">
+      <Carousel shadow={true} slides={slides} showDots={true} interval={8000}  />
+      {/* <Carrusel /> */}
+    </div>
       <div className="container mx-auto my-12 md:my-24">
         <Card className="w-full mx-auto max-w-[58rem] flex-column md:flex-row p-5 md:p-0">
           <CardHeader
